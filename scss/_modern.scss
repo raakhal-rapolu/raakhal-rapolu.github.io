@@ -1,0 +1,187 @@
+// Modern portfolio enhancements
+
+// ---- Tech tags (on experience items) ----
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: rgba($orange, 0.08);
+  color: $orange;
+  border: 1px solid rgba($orange, 0.25);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $orange;
+    color: $white;
+    border-color: $orange;
+  }
+}
+
+// ---- Skill badges ----
+.skill-group {
+  .subheading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 25px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: $gray-100;
+  color: $gray-700;
+  border: 1px solid $gray-300;
+  transition: all 0.2s ease;
+  cursor: default;
+
+  i {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background: $gray-700;
+    color: $white;
+    border-color: $gray-700;
+    transform: translateY(-2px);
+  }
+
+  &.primary {
+    background: rgba($orange, 0.07);
+    color: $orange;
+    border-color: rgba($orange, 0.3);
+
+    &:hover {
+      background: $orange;
+      color: $white;
+      border-color: $orange;
+    }
+  }
+}
+
+// ---- Stats row (about section) ----
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .stat-block {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: $orange;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: $gray-600;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+}
+
+// ---- Project cards ----
+.project-card {
+  border: 1px solid $gray-200;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background: $white;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    border-color: $orange;
+  }
+
+  .project-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .project-title {
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $gray-800;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+  }
+
+  .project-date {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $orange;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: $gray-600;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+// ---- Scroll fade-in ----
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ---- Experience sub-section labels ----
+.exp-subsection {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $orange;
+  border-left: 3px solid $orange;
+  padding-left: 0.6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+// ---- Section dividers ----
+.resume-section + .resume-section {
+  border-top: 1px solid $gray-200;
+}
